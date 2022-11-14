@@ -22,19 +22,15 @@ tres = lambda f: lambda x: f(f(f(x)))
 
 
 # Definición de la funcion sucesor (n + 1)
-sucesor = lambda n, f: lambda x: f(n(f(x)))
+sucesor = lambda n: lambda f: lambda x: f(n(f)(x))
 
 
 # Definición de la funcion suma (a + b)
-suma = lambda a, b, f: lambda x: a(f(b(f(x))))
+suma = lambda a: lambda b: lambda f: lambda x: a(f)(b(f)(x))
 
 
 # Definición de la funcion multiplicacion (a * b)
-multiplicacion = lambda a, b, f: lambda x: a(b(f(x)))
-
-
-# Definición de la funcion potencia (a ** b)
-potencia = lambda a, b, f: lambda x: a(a(b(b(f(x)))))
+multiplicacion = lambda a: lambda b: lambda f: lambda x: a(b(f)(x))(x)
 
 
 
