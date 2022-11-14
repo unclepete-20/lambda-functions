@@ -40,7 +40,7 @@ multiplicacion = lambda a: lambda b: lambda f: lambda x: a(b(f))(x)
 
 
 # Definición de la funcion potencia (a ** b)
-potencia = lambda a: lambda b: lambda f: lambda x: a(f)(x)
+potencia = lambda a: lambda b: lambda f: lambda x: b(a)(f)(x)
 
 
 # Funciones con operaciones aritmeticas basicas
@@ -110,3 +110,6 @@ print('\n')
 print('La potencia de cero elevado a uno con funcion beta y parametro 0 = ' + str(potencia(cero)(uno)(beta)(1))) # Primer ejemplo de la funcion potencia utilizando beta
 print('La potencia de dos elevado a tres con funcion beta y parametro 0 = ' + str(potencia(dos)(tres)(beta)(1))) # Primer ejemplo de la funcion potencia utilizando beta
 print('La potencia de cuatro elevado a cinco con funcion beta y parametro 0 = ' + str(potencia(cuatro)(cinco)(beta)(1))) # Primer ejemplo de la funcion potencia utilizando beta
+
+
+print('\n')
